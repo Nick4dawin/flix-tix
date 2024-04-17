@@ -1,9 +1,9 @@
-import { createTRPCRouter, publicProcedure } from "..";
+import { createTRPCRouter, publicProcedure } from '..'
 
 export const appRouter = createTRPCRouter({
-    hello: publicProcedure.query(() => {
-        return {title: "News", content: "Lorem Ipsum" }
-    }),
+  hello: publicProcedure.query(({ ctx }) => {
+    return { title: 'News', content: 'Lorem Ipsum' }
+  }),
 })
 
 export type AppRouter = typeof appRouter
