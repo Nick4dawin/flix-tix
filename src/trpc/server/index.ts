@@ -25,7 +25,7 @@ export const protectedProcedure =(...roles : Role[])=> publicProcedure.use(async
 
   await authorizeUser(ctx.session.userId,roles);
   return next({
-    ctx,
+    ctx: {...ctx,userId: ctx.session.userId},
 })
 
 })
