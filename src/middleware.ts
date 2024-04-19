@@ -4,5 +4,10 @@ export default authMiddleware({
   ignoredRoutes: [],
 })
 export const config = {
-  matcher: ['/((?!.+.[w]+$|_next).*)', '/', '/(api|trpc)(.*)','/admin/movies/new'],
+  matcher: [
+    '/((?!.+.[w]+$|_next).*)',
+    '/',
+    '/(api|trpc)(.*)',
+    '/admin/movies/new',
+  ],
 }

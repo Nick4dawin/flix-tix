@@ -4,7 +4,7 @@ import { moviesRouter } from './movies'
 
 export const appRouter = createTRPCRouter({
   movies: moviesRouter,
-  admins: adminsRouter
+  admins: adminsRouter,
 })
 
 export type AppRouter = typeof appRouter

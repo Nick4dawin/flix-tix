@@ -4,7 +4,7 @@ import { DeveloperInfo } from './developer-info'
 import { cn } from '@/lib/utils'
 
 export interface IBrandProps {}
-const poppins = Poppins({ subsets: ['latin'] , weight:['800'] })
+const poppins = Poppins({ subsets: ['latin'], weight: ['800'] })
 export const Brand = () => {
   return (
     <div>
@@ -12,7 +12,8 @@ export const Brand = () => {
         href="/"
         className={cn(
           'hover:underline font-semibold underline-offset-4 text-primary-500',
-        poppins.className)}
+          poppins.className,
+        )}
       >
         FlixTix
       </Link>

@@ -4,7 +4,7 @@ import React from 'react'
 const MoviesPage = () => {
   return (
     <div>
-      <ListMovies/>
+      <ListMovies />
     </div>
   )
 }

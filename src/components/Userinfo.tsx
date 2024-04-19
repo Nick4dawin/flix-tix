@@ -1,12 +1,7 @@
-import { RouterOutputs } from "@/trpc/clients/types"
-
+import { RouterOutputs } from '@/trpc/clients/types'
 
 const Userinfo = () => {
-  return (
-    <div>
-      UserInfo
-    </div>
-  )
+  return <div>UserInfo</div>
 }
 
 export default Userinfo

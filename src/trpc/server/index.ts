@@ -18,14 +18,14 @@ const t = initTRPC.context<typeof createTRPCContext>().create()
 export const createTRPCRouter = t.router
 export const publicProcedure = t.procedure
 
-export const protectedProcedure =(...roles : Role[])=> publicProcedure.use(async ({ctx,next})=>{
-  if(!ctx.session || !ctx.session.userId ){
-    throw new TRPCError({ code: 'UNAUTHORIZED'})
-  }
+export const protectedProcedure = (...roles: Role[]) =>
+  publicProcedure.use(async ({ ctx, next }) => {
+    if (!ctx.session || !ctx.session.userId) {
+      throw new TRPCError({ code: 'UNAUTHORIZED' })
+    }
 
-  await authorizeUser(ctx.session.userId,roles);
-  return next({
-    ctx: {...ctx,userId: ctx.session.userId},
-})
-
-})
+    await authorizeUser(ctx.session.userId, roles)
+    return next({
+      ctx: { ...ctx, userId: ctx.session.userId },
+    })
+  })

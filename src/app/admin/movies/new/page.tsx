@@ -4,7 +4,7 @@ import React from 'react'
 const NewMoviePage = () => {
   return (
     <div>
-      <CreateMovie/>
+      <CreateMovie />
     </div>
   )
 }
